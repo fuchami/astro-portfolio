@@ -4,7 +4,7 @@ import { getImage } from 'astro:assets';
 import type { AuthorInfo } from '@/lib/constants';
 
 interface Props extends AuthorInfo {}
-const { avatar, name, headline, username, location, pronouns } = Astro.props;
+const { avatar, name, headline, username, location} = Astro.props;
 
 const image = await getImage({ src: avatar, format: 'avif'});
 ---
@@ -27,12 +27,7 @@ const image = await getImage({ src: avatar, format: 'avif'});
         {headline} in {' '}
         <span>
           {location}
-        </span>,
-        {pronouns && (
-          <span>
-            {pronouns}
-          </span>
-        )}
+        </span>
       </p>
     </div>
     <span class="text-foreground text-sm bg-muted-foreground/40 px-2 py-1 rounded-full w-max leading-none">

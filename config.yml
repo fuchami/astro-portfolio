@@ -2,7 +2,7 @@
 sections:
   about: true
   workExperience: true
-  talks: true
+  talks: false
   writing: true
   socialLinks: true
 
