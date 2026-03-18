@@ -8,7 +8,8 @@ import { remarkReadingTime } from './src/lib/remark.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://cv.coderdiaz.com',
+  site: 'https://fuchami.com',
+  base: '/astro-portfolio',
   markdown: {
     remarkPlugins: [remarkReadingTime],
     shikiConfig: {
@@ -77,5 +78,5 @@ export default defineConfig({
         },
       },
     ],
-  },  
+  },
 });
