@@ -1,5 +1,5 @@
 import type { z } from 'astro/zod';
-import MetaDefaultImage from '@/assets/images/meta-default.jpg';
+import MetaDefaultImage from '@/assets/images/meta.png';
 import avatar from '@/assets/images/icon.png';
 import type { seoSchemaWithoutImage } from '@/content.config';
 import astroConfig from 'astro.config.mjs';
