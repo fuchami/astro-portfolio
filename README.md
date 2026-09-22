@@ -29,19 +29,16 @@ git checkout -b feat/your-feature # or fix/your-fix
 
 > Don't push directly to the main branch. Instead, create a new branch and push it to your branch.
 
-Next, install the dependencies using Bun or NPM:
+Next, install the dependencies using NPM:
 
 ```sh
-bun install
-
-# npm
 npm install
 ```
 
 Finally, start the development server:
 
 ```sh
-bun dev
+npm run dev
 ```
 
 If everything is OK, push your branch and create a pull request:
