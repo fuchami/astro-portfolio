@@ -23,6 +23,17 @@ export const includeDraft = (draft: boolean) => {
 };
 
 /*
+ * Generic function for sorting items by date in descending order (newest first)
+ */
+export const sortByDate = <T extends { data: { date: Date } }>(
+  items: T[],
+) => {
+  return items.sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  );
+};
+
+/*
  * Generic function for sorting items with start and optional end years
  * - Items without an end year are considered ongoing and are sorted accordingly
  * - Items are sorted by end year descending, then by start year descending

@@ -4,7 +4,7 @@ date: 2026-03-22
 image: ./meta.png
 seo:
   title: 開発環境2026
-  description: development environment in 2026
+  description: 2026年時点の開発環境まとめ
   type: article
   keywords: development environment, Neovim, Terminal, Shell
 ---
@@ -16,43 +16,43 @@ seo:
 業務もプライベートもmacOSを使っています。
 
 プライベートマシンはM2 Pro Mac miniを利用しています。
-特に不便なく利用出来ていますが、32GB RAMだとパラメーター数の大きなLLMは動かせないのでM5 Mac mini/Studioが出たら買い替えを検討しています。
+特に不便なく利用できていますが、32GB RAMだとパラメーター数の大きなLLMは動かせないので新しいMac mini/Studioが出たら買い替えを検討しています。
 
-自宅サーバーとしてUbuntuを載せたMINISFORUMのミニPCがありますが、[Homebridge](https://homebridge.io/) を動かしているくらいであまり活用はできてはいないです。
+自宅サーバーとしてUbuntuを載せたMINISFORUMのミニPCがありますが、[Homebridge](https://homebridge.io/) を動かしているくらいであまり活用できていないです。
 
 ## エディタ
 
-2023年ごろからNeoVimを使っています。
+2023年ごろからNeovimを使っています。
 ディストリビューションとして [AstroNvim](https://astronvim.com/) を入れており、こちらをベースに自分なりにカスタマイズしています。
 
-Jupyter Notebookを触る場合にのみVScodeを使っていましたが、最近はNotebook環境も [marimo](https://marimo.io/) を使うようになり、NeoVimで完結出来るようになったため、ほとんど起動する機会はないです。
+Jupyter Notebookを触るときにだけVS Codeを使っていましたが、最近はNotebook環境も [marimo](https://marimo.io/) を使うようになりました。これでNeovimだけで完結できるようになったため、VS Codeを起動する機会はほとんどありません。
 
 ## シェル
 
-![shell](./shell.png)
+![Shell Prompt](./shell.png)
 
 zshを使っています。
 
 プラグインマネージャーにはSheldonを使っています。
-使い方として正しいのか分からないのですが、遅延読み込みしないものやプラグイン以外のものもインラインで定義しておいて`.zshrc`が散らからないようにしています。
+使い方として正しいのか分からないのですが、遅延読み込みさせないものやプラグイン以外のものもインラインで定義しておき、`.zshrc`が散らからないようにしています。
 
 ```sh
 [plugins.zoxide]
 inline = 'eval "$(zoxide init zsh)"'
-````
+```
 
 プロンプトには [oh-my-posh](https://ohmyposh.dev/) を使っています。
 
-元々はpowerlevel10kを使っており、メンテモードに入ってからはstarshipに移行していました。
+もともとはpowerlevel10kを使っており、メンテモードに入ってからはstarshipに移行していました。
 ただ、starshipにはp10kの [Show on command](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#show-on-command) と同等の機能がなく、
 他のプロンプトを検討したところ [Tooltips](https://ohmyposh.dev/docs/configuration/tooltips) のあるoh-my-poshに落ち着きました。
 
-見た目も綺麗で、機能も十分なので気に入ってます。
+見た目もきれいで、機能も十分なので気に入っています。
 
 
 ## ターミナルエミュレータ
 
-luaで設定が記述でき、NeoVimとの相性が良いので [WezTerm](https://wezterm.org/index.html) を使っています。
+Luaで設定が記述でき、Neovimとの相性が良いので [WezTerm](https://wezterm.org/index.html) を使っています。
 
 ターミナルマルチプレクサなどは特に入れずにWezTerm標準のタブやWorkspaces機能で十分満足しています。
 キーマップはtmuxライクにし、[tabline.wez](https://github.com/michaelbrusegard/tabline.wez) を入れてタブバーの見た目をカスタマイズしています。
@@ -64,33 +64,33 @@ luaで設定が記述でき、NeoVimとの相性が良いので [WezTerm](https:
 
 会社環境の都合上、Codexをメインに使っています。
 
-プライベートでは特にサブスクプランは契約していませんが検証も兼ねてローカルLLMを使うことはあります。
+プライベートでは特にサブスクプランは契約していませんが、検証も兼ねてローカルLLMを使うことがあります。
 
 ## dotfiles
 
 [yadm](https://yadm.io/) を使って管理しています。
 
-世間的にはchezmoiユーザーが多いようですが、`dot_config`のような名前で管理するのに違和感あったのでこちらを使っています。
+世間的にはchezmoiユーザーが多いようですが、`dot_config`のような名前で管理するのに違和感があったのでこちらを使っています。
 
 https://github.com/fuchami/dotfiles/tree/main
 
 ## Git/GitHub関連
 
-TUIツールとしてlazygit を入れています。
+TUIツールとしてlazygitを入れています。
 
-最近はIssueやPRの作成/編集もターミナルで完結したくなってきたのでOcto.nvimやgh-dashを試したりしています。
+最近はIssueやPRの作成/編集もターミナルで完結させたくなってきたのでOcto.nvimやgh-dashを試したりしています。
 
 ## ウィンドウマネージャー
 
 ずっとRectangleとhammerspoonを使っていたのですが、今年の1月ごろに [AeroSpace](https://nikitabobko.github.io/AeroSpace/guide) へ移行しました。
 
-タイリングウィンドウマネージャは初めてで慣れが必要でしたが、ようやく身体に馴染んできました。
+タイリングウィンドウマネージャーは初めてで慣れが必要でしたが、ようやく身体に馴染んできました。
 困る場面としては、ミーティングでの画面共有時くらいでしょうか。
 
 ## ランチャー
 
-macOS標準のSpotlightを使っていましたが最近 [RayCast](https://www.raycast.com/) を導入しました。
-クリップボードやスニペット管理に使っていたClipyもやめてRayCastでまとめられたのは良かったです。
+macOS標準のSpotlightを使っていましたが最近 [Raycast](https://www.raycast.com/) を導入しました。
+クリップボードやスニペット管理に使っていたClipyもやめ、Raycastに集約できたのは良かったです。
 
 ## その他ツール・アプリ
 
@@ -98,18 +98,18 @@ macOS標準のSpotlightを使っていましたが最近 [RayCast](https://www.r
 
 以下の設定を入れています。
 
-- Ctrl+\[をしたときに英数キーも送信する
-- escキーを押したときに、英数キーも送信する
-- コマンドキー(左右どちらでも)を単体で押したときに、英数・かなをトグルで切り替える
-- Exchange semicolon and colon
+- Ctrl+\[を押したときに英数キーも送信する
+- Escキーを押したときに英数キーも送信する
+- コマンドキー（左右どちらでも）を単体で押したときに、英数・かなをトグルで切り替える
+- セミロン（;）とコロン（:）を入れ替える
 
---- 
+---
 
 ## 物理環境
 
 ### キーボード
 US配列のHHKBを使っています。
-カッコつけて無刻印を購入したのですが、流石に数字入力が辛いので「6」の部分を青色キートップに変えています。
+カッコつけて無刻印を購入したのですが、さすがに数字入力がつらいので「6」の部分を青色キートップに変えています。
 
 ### マウス/トラックボール
 
@@ -119,17 +119,17 @@ US配列のHHKBを使っています。
 
 ### モニター
 
-LGの32インチ4Kモニターを使っています。でかいモニタは正義です。
+LGの32インチ4Kモニターを使っています。でかいモニターは正義です。
 
 ### デスク
 
-ロウヤのダイニングテーブルをデスクを使っています。
+ロウヤのダイニングテーブルをデスクとして使っています。
 めちゃめちゃ高いですが、いずれPREDUCTSデスクを購入したいです。
 
 ### チェア
 
 中古で買ったハーマンミラーのアーロンチェアを使っています。
-ガスシリンダーの調子が悪いので、こちらもいずれ買い替えたいです
+ガスシリンダーの調子が悪いので、こちらもいずれ買い替えたいです。
 
 ---
 
@@ -137,6 +137,6 @@ LGの32インチ4Kモニターを使っています。でかいモニタは正�
 
 こういう開発環境を整えるのは好きで、気になったツールは積極的に試すようにしています。
 
-GUIが苦手なのと、純粋にカッコよくて気分が上がるからという理由でCUI/TUIツールを多用しています。
+GUIが苦手なことと、純粋にカッコよくて気分が上がるという理由でCUI/TUIツールを多用しています。
 気分が上がると業務効率も上がると考えています。
 
